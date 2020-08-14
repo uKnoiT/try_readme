@@ -54,7 +54,7 @@ async function get5Repos() {
 
             document.getElementById('image').src=imgdata;
     
-            // console.log(imgdata);
+            console.log(imgdata);
 
             var b = document.createElement('a');
             a.href = imgdata;
