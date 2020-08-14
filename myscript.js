@@ -46,6 +46,7 @@ async function get5Repos() {
         }
         if(j==4) break;
     }
+    // var imgdata;
 
     html2canvas(document.getElementById('sec'))
         .then(function (canvas) {
@@ -53,8 +54,59 @@ async function get5Repos() {
 
             document.getElementById('image').src=imgdata;
     
-            console.log(imgdata);
+            // console.log(imgdata);
+
+            var b = document.createElement('a');
+            a.href = imgdata;
+            a.download = "output.png";
+            document.body.appendChild(a);
+            // b.load();
+            a.click();
+
+            document.body.removeChild(a);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // var saveimg = imgdata.split(';')[1];
+    // var saveimg = saveimg.split(',')[1];
+    // var saveimg = saveimg.replace(' ','+');
+
+    // var x = window.atob(saveimg);
+    // const headers = `Basic `${atob(`${saveimg}`)}`       // 'basic' authentication does't supported by github any more
+    // var blob = new Blob([x],{type: "image/png"});
+    // saveAs(blob, "repoImg.png");
+    // // console.log(x);
+    // const fs = require('fs');
+    // fs.writeFile('a.jpg',x,(err) => {
+    //     if(err) throw err;
+    // })
+    // set("png",createData("png","image/png"));
+    // // <script> 
+    // var fs = new ActiveXObject("Scripting.FileSystemObject");
+    // var cf = fs.Create
+    // const fs = require('fs');
+    // fs.writeFile('a.jpg',x,(err) => {
+    //     if (err) throw err; 
+
+    // console.log(data.toString()); 
+    // }) 
+    // </script> 
+
         })
+
+
+
 }
 
 // async function clear() {              // clear earlier result before printing new
