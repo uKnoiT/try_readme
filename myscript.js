@@ -54,17 +54,16 @@ async function get5Repos() {
 
             document.getElementById('image').src=imgdata;
     
-            console.log(imgdata);
+            // console.log(imgdata);
 
-            var b = document.createElement('a');
+            // below code should run once a month only - [set cron job in github]
+            var a = document.createElement('a');
             a.href = imgdata;
             a.download = "output.png";
+            // cron job maybe start from here
             document.body.appendChild(a);
-            // b.load();
-            a.click();
-
+            a.click(); // calling click event on webpg thru js
             document.body.removeChild(a);
-
 
 
 
